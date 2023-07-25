@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Etch-a-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Maven+Pro:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ETCH A SKETCH</h1>
+    </header>
+    <main>
+      <div class="buttons--container">
+        <input
+          type="color"
+          id="input--color"
+          name="input--color"
+          value="#ff0000"
+        />
+        <input
+          type="range"
+          id="input--grid-size"
+          name="input--grid-size"
+          min="6"
+          max="64"
+          value="16"
+        />
+        <input type="radio" name="buttonGroup" id="button--picker" value="picker"><label for="button--picker">Picker</label>
+        <input type="radio" name="buttonGroup" id="button--rgb" value="rainbow"><label for="button--rgb">Rainbow</label>
+        <input type="radio" name="buttonGroup" id="button--shadow" value="shadow"><label for="button--shadow">Shadow</label>
+        <input type="radio" name="buttonGroup" id="button--eraser" value="eraser"><label for="button--eraser">Eraser</label>
+        <input type="radio" name="buttonGroup" id="button--clear" value="clear"><label for="button--clear">Clear</label>
+      </div>
+      <div id="grid--container" class="grid--container"></div>
+    </main>
+    <footer>
+      <small>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Mapachin
+      </small>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

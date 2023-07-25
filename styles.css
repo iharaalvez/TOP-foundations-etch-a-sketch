@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Maven Pro", sans-serif;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*-----HEADER-----*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #303f9f;
+}
+
+header h1 {
+  font-family: "Gloria Hallelujah";
+  font-weight: 300;
+  font-size: 48px;
+  color: #fff;
+}
+
+/*-----MAIN-----*/
+
+main {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.buttons--container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input[type='radio'][name='buttonGroup'] { display:none; }
+label {
+  display:inline-block;
+  padding:3px;
+  border:1px solid #e0e0e0;
+  border-radius:3px;
+  background-color:#F0F0F0;
+  width:10em;
+  text-align:center;
+}
+
+/* Clicking a label will select its corresponding hidden radio button
+   We can select that radio buttons sibling label and style it. */
+input[type='radio'][name='buttonGroup']:checked + label { background-color:#a0a0a0; }
+
+#grid--container {
+  height: 600px;
+  width: 600px;
+  display: grid;
+}
+
+#grid--container > div {
+  background-color: #ebe9e9;
+  border: 0.1px solid #c4c4c5;
+}
+
+/*-----FOOTER-----*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 20px;
+  height: 4vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #455a64;
+  color: #fff;
+}
