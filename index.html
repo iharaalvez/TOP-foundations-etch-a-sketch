@@ -33,11 +33,34 @@
           max="64"
           value="16"
         />
-        <input type="radio" name="buttonGroup" id="button--picker" value="picker"><label for="button--picker">Picker</label>
-        <input type="radio" name="buttonGroup" id="button--rgb" value="rainbow"><label for="button--rgb">Rainbow</label>
-        <input type="radio" name="buttonGroup" id="button--shadow" value="shadow"><label for="button--shadow">Shadow</label>
-        <input type="radio" name="buttonGroup" id="button--eraser" value="eraser"><label for="button--eraser">Eraser</label>
-        <input type="radio" name="buttonGroup" id="button--clear" value="clear"><label for="button--clear">Clear</label>
+        <p id="text--size"></p>
+        <input
+          type="radio"
+          name="buttonGroup"
+          id="button--picker"
+          value="picker"
+          checked/>
+        <label for="button--picker">Picker</label>
+        <input
+          type="radio"
+          name="buttonGroup"
+          id="button--rgb"
+          value="rainbow"/>
+        <label for="button--rgb">Rainbow</label>
+        <input
+          type="radio"
+          name="buttonGroup"
+          id="button--shadow"
+          value="shadow"/>
+        <label for="button--shadow">Shadow</label>
+        <input
+          type="radio"
+          name="buttonGroup"
+          id="button--eraser"
+          value="eraser"/>
+        <label for="button--eraser">Eraser</label>
+        <input type="button" name="buttonGroup" id="button--clear" />
+        <label for="button--clear">Clear</label>
       </div>
       <div id="grid--container" class="grid--container"></div>
     </main>

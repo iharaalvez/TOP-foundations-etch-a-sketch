@@ -13,13 +13,14 @@ const buttonPicker = document.getElementById("button--picker");
 const buttonEraser = document.getElementById("button--eraser");
 const buttonClear = document.getElementById("button--clear");
 const buttonShadow = document.getElementById("button--shadow");
+const textSize = document.getElementById("text--size");
 
 colorPicker.oninput = (e) => setColor(e.target.value);
 sizePicker.onchange = (e) => setSize(e.target.value);
 buttonRgb.onclick = (e) => setMode(e.target.value);
 buttonPicker.onclick = (e) => setMode(e.target.value);
 buttonEraser.onclick = (e) => setMode(e.target.value);
-buttonClear.onclick = (e) => generateGrid(currentSize);
+buttonClear.onclick = () => generateGrid(currentSize);
 buttonShadow.onclick = (e) => setMode(e.target.value);
 
 function setColor(newColor) {
@@ -54,7 +55,7 @@ function draw(element) {
         let currentBackgroundColor = window.getComputedStyle(
           element.target
         ).backgroundColor;
-        let rgbValues = currentBackgroundColor.match(/\d+/g); // Extract RGB values
+        let rgbValues = currentBackgroundColor.match(/\d+/g); // Get rgb values
         let r = Math.max(rgbValues[0] - Math.floor(rgbValues[0] * 0.1), 0);
         let g = Math.max(rgbValues[1] - Math.floor(rgbValues[1] * 0.1), 0);
         let b = Math.max(rgbValues[2] - Math.floor(rgbValues[2] * 0.1), 0);
@@ -72,12 +73,9 @@ function draw(element) {
   }
 }
 
-function clear() {
-  gridContainer.innerHTML = "";
-}
-
 function generateGrid(size) {
-  clear();
+  gridContainer.innerHTML = "";
+  textSize.innerHTML = `${currentSize} x ${currentSize}`;
 
   gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
